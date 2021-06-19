@@ -1,3 +1,7 @@
+#This program reads tweets made within a week and scans it to categorize as a positive or negative opinion.
+#In the cryptocurrency world, the Fear vs Greed index is one way of analysing if an asset will increase or decrease.
+#This program tries to do that index.
+
 from os import truncate
 from datetime import date, timedelta
 from nltk.util import pr
@@ -75,7 +79,7 @@ doge = 'Dogecoin'
 search = f'#{doge} -filter:retweets' #defines the search term ('q' parameter at tweet_cursor)
 # filtes for retweets, maintaing the search minimal as possible and also focusing in the data that matters
 
-tweet_cursor = tweepy.Cursor(api.search, q=search, lang='en', until = today, since=weekago, tweet_mode='extended').items(100)
+tweet_cursor = tweepy.Cursor(api.search, q=search, lang='en', until = today, since=weekago, tweet_mode='extended').items(1000)
 # tweet_mode='extended' :  the text attribute of Status objects returned by tweepy.API methods is replaced
 # by a full_text attribute, which contains the entire untruncated text of the Tweet
 # items define the quantity of tweets to be analysed
