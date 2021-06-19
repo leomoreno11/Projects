@@ -59,7 +59,7 @@ api_key =            twitterkeys [0]
 secret_key =         twitterkeys [1]
 access_token =       twitterkeys [2]
 accessSecret_token = twitterkeys [3]
-print("\n>> Leitura das keys completa")
+print("\n>> Complete key collection")
 print('Api:          ', api_key)
 print('Secret Key:   ', secret_key)
 print('Access Token: ', access_token)
