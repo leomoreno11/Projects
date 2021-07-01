@@ -79,7 +79,7 @@ doge = 'Dogecoin'
 search = f'#{doge} -filter:retweets' #defines the search term ('q' parameter at tweet_cursor)
 # filtes for retweets, maintaing the search minimal as possible and also focusing in the data that matters
 
-tweet_cursor = tweepy.Cursor(api.search, q=search, lang='en', until = today, since=weekago, tweet_mode='extended').items(5000)
+tweet_cursor = tweepy.Cursor(api.search, q=search, lang='en', until = today, since=weekago, tweet_mode='extended').items(500)
 # tweet_mode='extended' :  the text attribute of Status objects returned by tweepy.API methods is replaced
 # by a full_text attribute, which contains the entire untruncated text of the Tweet
 # items define the quantity of tweets to be analysed
