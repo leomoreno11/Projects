@@ -47,6 +47,16 @@ def investiment(amount, rate, months, contribution):
         amount = a + contribution
         i += 1
 
+    # adicionar a opção de um contribution mensal
+
+    #while x < len(results):
+    #     #print('Month {} | $ {}'.format(c, results[x]) + ' | Profit of {}'.format(profits[x]))
+    #     #print('Month' + '\t\t' + 'Result' + '\t\t' + '  Profit' + '\t\t' + 'Total Profits')
+    #     #print('{}'.format(c) + '\t\t' + '{}'.format(results[x]) + '\t\t' + '  {}'.format(profits[x]) + '\t\t' + '{}'.format(profitsSum[x]))
+    #     #print('')
+    #     df = pd.DataFrame({'Month': monthSum, 'Result': results, 'Profit' : profits, 'Total Profits' : profitsSum})
+    #
+    #     x += 1
     
     df = pd.DataFrame({'Month': monthSum, 'Result': results, 'Profit' : profits, 'Total Profits' : profitsSum, 'Total Contributions' : contributionSum})
     print(df.to_string(index=False))
